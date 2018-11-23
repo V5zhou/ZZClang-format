@@ -6,9 +6,31 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		FC28A8D321A3ACC60051BE10 /* ZZClang-Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = FC28A8D221A3ACC60051BE10 /* ZZClang-Helper.m */; };
+		FC74950921A5401A00CCE3D0 /* IDEFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC74950821A5401A00CCE3D0 /* IDEFoundation.framework */; };
+		FC74950B21A5401E00CCE3D0 /* IDEKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC74950A21A5401E00CCE3D0 /* IDEKit.framework */; };
+		FC99E65821A3BA290085BDFF /* clang-format in Resources */ = {isa = PBXBuildFile; fileRef = FC99E65721A3BA290085BDFF /* clang-format */; };
+		FC99E65E21A4F8060085BDFF /* ZZClang-Fragment.m in Sources */ = {isa = PBXBuildFile; fileRef = FC99E65D21A4F8060085BDFF /* ZZClang-Fragment.m */; };
+		FCB6404421A795BD00B71F5C /* NSDocument+ZZClang.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB6404321A795BD00B71F5C /* NSDocument+ZZClang.m */; };
+		FCE3FC2821A399A000B85908 /* ZZClang-format.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE3FC2721A399A000B85908 /* ZZClang-format.m */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
-		FCE3FC1D21A3998900B85908 /* ZZClang-format.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ZZClang-format.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC28A8D121A3ACC60051BE10 /* ZZClang-Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZZClang-Helper.h"; sourceTree = "<group>"; };
+		FC28A8D221A3ACC60051BE10 /* ZZClang-Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ZZClang-Helper.m"; sourceTree = "<group>"; };
+		FC74950821A5401A00CCE3D0 /* IDEFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDEFoundation.framework; path = ../../../../Applications/Xcode.app/Contents/Frameworks/IDEFoundation.framework; sourceTree = "<group>"; };
+		FC74950A21A5401E00CCE3D0 /* IDEKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDEKit.framework; path = ../../../../Applications/Xcode.app/Contents/Frameworks/IDEKit.framework; sourceTree = "<group>"; };
+		FC99E65721A3BA290085BDFF /* clang-format */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "clang-format"; sourceTree = "<group>"; };
+		FC99E65C21A4F8060085BDFF /* ZZClang-Fragment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZZClang-Fragment.h"; sourceTree = "<group>"; };
+		FC99E65D21A4F8060085BDFF /* ZZClang-Fragment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ZZClang-Fragment.m"; sourceTree = "<group>"; };
+		FCB6404221A795BD00B71F5C /* NSDocument+ZZClang.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDocument+ZZClang.h"; sourceTree = "<group>"; };
+		FCB6404321A795BD00B71F5C /* NSDocument+ZZClang.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDocument+ZZClang.m"; sourceTree = "<group>"; };
+		FCE3FC1D21A3998900B85908 /* ZZClang-format.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ZZClang-format.xcplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCE3FC2021A3998900B85908 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCE3FC2621A399A000B85908 /* ZZClang-format.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZZClang-format.h"; sourceTree = "<group>"; };
+		FCE3FC2721A399A000B85908 /* ZZClang-format.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ZZClang-format.m"; sourceTree = "<group>"; };
+		FCE3FC2921A39B1B00B85908 /* ZZXcode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZXcode.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -16,24 +38,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC74950921A5401A00CCE3D0 /* IDEFoundation.framework in Frameworks */,
+				FC74950B21A5401E00CCE3D0 /* IDEKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC99E65F21A53EEB0085BDFF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC74950A21A5401E00CCE3D0 /* IDEKit.framework */,
+				FC74950821A5401A00CCE3D0 /* IDEFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FCE3FC1421A3998900B85908 = {
 			isa = PBXGroup;
 			children = (
 				FCE3FC1F21A3998900B85908 /* ZZClang-format */,
 				FCE3FC1E21A3998900B85908 /* Products */,
+				FC99E65F21A53EEB0085BDFF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		FCE3FC1E21A3998900B85908 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FCE3FC1D21A3998900B85908 /* ZZClang-format.bundle */,
+				FCE3FC1D21A3998900B85908 /* ZZClang-format.xcplugin */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -41,6 +75,16 @@
 		FCE3FC1F21A3998900B85908 /* ZZClang-format */ = {
 			isa = PBXGroup;
 			children = (
+				FCE3FC2621A399A000B85908 /* ZZClang-format.h */,
+				FCE3FC2721A399A000B85908 /* ZZClang-format.m */,
+				FC28A8D121A3ACC60051BE10 /* ZZClang-Helper.h */,
+				FC28A8D221A3ACC60051BE10 /* ZZClang-Helper.m */,
+				FC99E65C21A4F8060085BDFF /* ZZClang-Fragment.h */,
+				FC99E65D21A4F8060085BDFF /* ZZClang-Fragment.m */,
+				FCE3FC2921A39B1B00B85908 /* ZZXcode.h */,
+				FCB6404221A795BD00B71F5C /* NSDocument+ZZClang.h */,
+				FCB6404321A795BD00B71F5C /* NSDocument+ZZClang.m */,
+				FC99E65721A3BA290085BDFF /* clang-format */,
 				FCE3FC2021A3998900B85908 /* Info.plist */,
 			);
 			path = "ZZClang-format";
@@ -63,7 +107,7 @@
 			);
 			name = "ZZClang-format";
 			productName = "ZZClang-format";
-			productReference = FCE3FC1D21A3998900B85908 /* ZZClang-format.bundle */;
+			productReference = FCE3FC1D21A3998900B85908 /* ZZClang-format.xcplugin */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -102,6 +146,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC99E65821A3BA290085BDFF /* clang-format in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +157,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCE3FC2821A399A000B85908 /* ZZClang-format.m in Sources */,
+				FC28A8D321A3ACC60051BE10 /* ZZClang-Helper.m in Sources */,
+				FC99E65E21A4F8060085BDFF /* ZZClang-Fragment.m in Sources */,
+				FCB6404421A795BD00B71F5C /* NSDocument+ZZClang.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,30 +281,50 @@
 		FCE3FC2421A3998900B85908 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = YH6XM8252K;
+				DEPLOYMENT_LOCATION = YES;
+				DEVELOPMENT_TEAM = "";
+				DSTROOT = "${HOME}";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_DIR)/../SharedFrameworks",
+					"$(DEVELOPER_DIR)/../Frameworks",
+				);
 				INFOPLIST_FILE = "ZZClang-format/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "yd.ZZClang-format";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = NO;
+				WRAPPER_EXTENSION = xcplugin;
 			};
 			name = Debug;
 		};
 		FCE3FC2521A3998900B85908 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = YH6XM8252K;
+				DEPLOYMENT_LOCATION = YES;
+				DEVELOPMENT_TEAM = "";
+				DSTROOT = "${HOME}";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_DIR)/../SharedFrameworks",
+					"$(DEVELOPER_DIR)/../Frameworks",
+				);
 				INFOPLIST_FILE = "ZZClang-format/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "yd.ZZClang-format";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = NO;
+				WRAPPER_EXTENSION = xcplugin;
 			};
 			name = Release;
 		};

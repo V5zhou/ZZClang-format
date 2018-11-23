@@ -1,0 +1,39 @@
+# 切换文件夹
+cd `dirname $0`
+pwd
+
+# 添加.clang-format文件
+if [ ! -f ~/.clang-format ]; then
+	cp .clang-format ~
+else
+	echo 'clang-format配置文件已存在'
+fi
+
+# 编译ZZClang
+# xcodebuild -scheme ZZClang-format -configuration Release
+
+# 查看gem源，并更改为https://gems.ruby-china.com/
+your_gem_source=`gem sources -l | grep https://gems.ruby-china.com/`
+
+if  [ -z $your_gem_source ]; then
+	echo '貌似你的gem源过期了'
+	gem sources --add https://gems.ruby-china.com/
+else
+	echo 'gem正常'
+fi
+
+# 允许Xcode插件
+
+if  command -v update_xcode_plugins > /dev/null; then
+    echo "update_xcode_plugins has found"
+else
+    echo "update_xcode_plugins has not found"
+    
+    # 安装
+    sudo gem install -n /usr/local/bin update_xcode_plugins
+fi
+
+update_xcode_plugins
+
+update_xcode_plugins --unsign
+

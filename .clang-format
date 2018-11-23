@@ -1,0 +1,75 @@
+######################## 基础设置 #########################
+
+# 基础样式
+BasedOnStyle: LLVM
+
+# 最多保留空行数
+MaxEmptyLinesToKeep: 1
+
+# 每行字符的限制，0表示没有限制
+ColumnLimit: 100
+
+# include排序
+SortIncludes: true
+
+######################## 空格设置 #########################
+
+# 在ObjC的@property后添加一个空格
+ObjCSpaceAfterProperty:	true
+
+# 在ObjC的protocol列表前添加一个空格
+ObjCSpaceBeforeProtocolList: true
+
+# 运算符左右添加空格
+SpaceBeforeAssignmentOperators: true
+
+# 括号前空格 （Never/ControlStatements控制语句/Always）
+SpaceBeforeParens: ControlStatements
+
+# 容器内空格，如数组/字典
+SpacesInContainerLiterals: true
+
+######################## 换行方式 #########################
+
+# 允许短的块放在同一行
+AllowShortBlocksOnASingleLine: true
+
+# 允许短的case标签放在同一行
+AllowShortCaseLabelsOnASingleLine: false
+
+# 允许短的函数放在同一行. None, InlineOnly(定义在类中), Empty(空函数), Inline(定义在类中，空函数), All
+AllowShortFunctionsOnASingleLine: Empty
+
+# 允许短的if语句保持在同一行
+AllowShortIfStatementsOnASingleLine: true
+
+# 允许短的循环保持在同一行,如while(1) ccc();
+AllowShortLoopsOnASingleLine: true
+
+# 函数声名太长时，参数换行
+AllowAllParametersOfDeclarationOnNextLine: true
+
+######################## 对齐方式 #########################
+
+# 对齐连续的尾随的注释
+AlignTrailingComments:	true
+
+# 指针星号位置（Left/Right/Middle）
+PointerAlignment: Right
+
+# 多行赋值时，以等号对齐
+AlignConsecutiveAssignments: true
+
+######################## 缩进方式 #########################
+
+# 缩进列数
+IndentWidth: 4
+
+# 制表符Tab宽度
+TabWidth: 4
+
+# block块缩进
+ObjCBlockIndentWidth: 4
+
+# switch语句，是否case缩进
+IndentCaseLabels: true

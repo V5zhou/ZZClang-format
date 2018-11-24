@@ -13,7 +13,8 @@ fi
 # xcodebuild -scheme ZZClang-format -configuration Release
 
 # 查看gem源，并更改为https://gems.ruby-china.com/
-your_gem_source=`gem sources -l | grep https://gems.ruby-china.com/`
+your_gem_source=`gem sources -l | grep https://gems.ruby-china.com`
+echo "your_gem_source:$your_gem_source"
 
 if  [ -z $your_gem_source ]; then
 	echo '貌似你的gem源过期了'

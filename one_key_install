@@ -9,8 +9,19 @@ else
 	echo 'clang-format配置文件已存在'
 fi
 
+# PlistBuddy添加Xcode的UUID
+xcode_uuid=`defaults read /Applications/Xcode.app/Contents/Info.plist DVTPlugInCompatibilityUUID`
+search_in_plist=`/usr/libexec/PlistBuddy -c "Print :DVTPlugInCompatibilityUUIDs:" ./ZZClang-format/Info.plist | grep $xcode_uuid`
+
+if [ ${#search_in_plist} == 0 ];then
+	echo "不存在Xcode的uuid：$xcode_uuid，自动添加"
+	/usr/libexec/PlistBuddy -c "Add :DVTPlugInCompatibilityUUIDs: string $xcode_uuid" ./ZZClang-format/Info.plist
+else
+	echo "已存在xcode_uuid:$xcode_uuid"
+fi
+
 # 编译ZZClang
-# xcodebuild -scheme ZZClang-format -configuration Release
+xcodebuild -scheme ZZClang-format -configuration Release
 
 # 查看gem源，并更改为https://gems.ruby-china.com/
 your_gem_source=`gem sources -l | grep https://gems.ruby-china.com`

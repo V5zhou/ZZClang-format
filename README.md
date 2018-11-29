@@ -1,20 +1,25 @@
 # ZZClang-format
 根据现有Xcode10的结构，编写的Xcode10代码格式化工具。应该9也可以，具体未测试。
 
-## 使用方法
+怀念当年Clang-format的同学，可以用起来。
+![Focus](https://ws3.sinaimg.cn/large/006tNbRwgy1fxopvespxzg314w0rhhay.gif)
+
+## 安装方法
 
 下载ZZClang-format，直接运行one_key_install，so easy。
+![one_key](https://ws3.sinaimg.cn/large/006tNbRwgy1fxopkaiezkj30nm0es0up.jpg)
 
 ## one_key_install为您做了什么？
 
 1. 添加`.clang-format`配置文件到个人文件夹`~`，clang-format脚本的规则配置在这里，当然您可以个性化配置，参考[这里](http://clang.llvm.org/docs/ClangFormatStyleOptions.html)
-2. 为您检查并添加UUID
+2. 检查并添加Xcode的UUID
 3. 编译插件
 4. 检查您的gem源，统一修改为最新https://gems.ruby-china.com/
 5. 检查update_xcode_plugins是否安装，未安装则安装
 6. 执行unsign
 
 执行过后，您就可以在Xcode->Edit栏中看到ZZClang-format了。
+![ZZClang-format](https://ws1.sinaimg.cn/large/006tNbRwgy1fxoplpbeoij310y0taaoi.jpg)
 
 ## 功能介绍
 

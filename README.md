@@ -2,12 +2,11 @@
 根据现有Xcode10的结构，编写的Xcode10代码格式化工具。应该9也可以，具体未测试。
 
 怀念当年Clang-format的同学，可以用起来。
-![Focus](https://ws3.sinaimg.cn/large/006tNbRwgy1fxopvespxzg314w0rhhay.gif)
+![Focus](https://github.com/V5zhou/ZZClang-format/blob/master/ZZClang-format/FocusFile%E6%A0%BC%E5%BC%8F%E5%8C%96.gif)
 
 ## 安装方法
 
 下载ZZClang-format，直接运行one_key_install，so easy。
-![one_key](https://ws3.sinaimg.cn/large/006tNbRwgy1fxopkaiezkj30nm0es0up.jpg)
 
 ## one_key_install为您做了什么？
 
@@ -19,7 +18,6 @@
 6. 执行unsign
 
 执行过后，您就可以在Xcode->Edit栏中看到ZZClang-format了。
-![ZZClang-format](https://ws1.sinaimg.cn/large/006tNbRwgy1fxoplpbeoij310y0taaoi.jpg)
 
 ## 功能介绍
 

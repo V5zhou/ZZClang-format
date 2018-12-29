@@ -1,6 +1,7 @@
 # ZZClang-format
-根据现有Xcode10的结构，编写的Xcode10代码格式化工具。应该9也可以，具体未测试。
+根据现有Xcode10的结构，编写的Xcode10代码格式化工具。
 怀念当年Clang-format的同学，可以用起来。
+**近日用swift重写了下此插件，支持了swift格式化，支持xcode9/10,请移步：[ZZXcodeFormat](https://github.com/V5zhou/ZZXcodeFormat)**
 
 ## 安装方法
 

@@ -37,3 +37,39 @@ ZZClang-format包含下面功能：
 
 ## 附一张clang-format FocusFile效果
 ![Focus](https://github.com/V5zhou/ZZClang-format/blob/master/ZZClang-format/FocusFile%E6%A0%BC%E5%BC%8F%E5%8C%96.gif)
+
+---
+## unsign后show in finder失效问题？
+
+最近发现一个bug，就是当执行[unsign](https://github.com/inket/update_xcode_plugins/blob/master/README.md)后，我在新的10.14系统（黑色主题那个）上，执行showinfiner时，无限转圈。
+
+解决方法：参考自[自签名](https://github.com/XVimProject/XVim/blob/master/INSTALL_Xcode8.md)
+
+1. 关闭Xcode
+
+2. 打开钥匙串，创建自签名证书： Keychain Access -> 左上角`钥匙串访问` -> 证书助理 -> 创建证书。
+![创建证书](https://ws4.sinaimg.cn/large/006tNc79gy1fytjbnp3wkj30y80o8jzh.jpg)
+
+3. 打开terminal使用此证书签名（会等待很长一段时间）：
+> sudo codesign -f -s XcodeSigner /Applications/Xcode.app
+
+*XcodeSigner为你刚才的命名*
+
+4. 重签成功后，打开Xcode，编译一下插件的工程文件就可以了。重启Xcode，看到弹框时，允许加载插件。
+
+## `the codesign_allocate helper tool cannot be found or used`重签失败？
+
+解决方法：
+
+查看当前这个命令所在的位置
+> locate codesign_allocate
+
+如果提示does not exist，则
+> cp /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate /usr/bin
+
+然后再重新签
+> sudo codesign -f -s XcodeSigner /Applications/Xcode.app
+
+等待，等待。。。过会就ok了
+
+参考自https://www.jianshu.com/p/a62c9efb1e53

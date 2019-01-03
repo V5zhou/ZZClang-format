@@ -39,7 +39,7 @@ ZZClang-format包含下面功能：
 ![Focus](https://github.com/V5zhou/ZZClang-format/blob/master/ZZClang-format/FocusFile%E6%A0%BC%E5%BC%8F%E5%8C%96.gif)
 
 ---
-## unsign后show in finder失效问题？
+## 1.unsign后show in finder失效问题？
 
 最近发现一个bug，就是当执行[unsign](https://github.com/inket/update_xcode_plugins/blob/master/README.md)后，我在新的10.14系统（黑色主题那个）上，执行showinfiner时，无限转圈。
 
@@ -57,17 +57,20 @@ ZZClang-format包含下面功能：
 
 4. 重签成功后，打开Xcode，编译一下插件的工程文件就可以了。重启Xcode，看到弹框时，允许加载插件。
 
-## `the codesign_allocate helper tool cannot be found or used`重签失败？
+## 2.`the codesign_allocate helper tool cannot be found or used`重签失败？
 
 解决方法：
 
 查看当前这个命令所在的位置
+
 > locate codesign_allocate
 
 如果提示does not exist，则
+
 > cp /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate /usr/bin
 
 然后再重新签
+
 > sudo codesign -f -s XcodeSigner /Applications/Xcode.app
 
 等待，等待。。。过会就ok了

@@ -39,6 +39,7 @@ ZZClang-format包含下面功能：
 ![Focus](https://github.com/V5zhou/ZZClang-format/blob/master/ZZClang-format/FocusFile%E6%A0%BC%E5%BC%8F%E5%8C%96.gif)
 
 ---
+# 遇到问题总结
 ## 1.unsign后show in finder失效问题？
 
 最近发现一个bug，就是当执行[unsign](https://github.com/inket/update_xcode_plugins/blob/master/README.md)后，我在新的10.14系统（黑色主题那个）上，执行showinfiner时，无限转圈。
@@ -67,7 +68,15 @@ ZZClang-format包含下面功能：
 
 如果提示does not exist，则
 
-> cp /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate /usr/bin
+> ~~cp /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate /usr/bin~~cp命令已失效
+
+原因见：[Operation not permitted](https://www.jianshu.com/p/22b89f19afd6)
+
+那就手动复制，手动打开两个finder窗口，分别前往文件夹/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate与/usr/bin，把前者的codesign_allocate拷贝到/usr/bin下。
+
+再执行下面语句是不是不一样了？
+
+> locate codesign_allocate
 
 然后再重新签
 

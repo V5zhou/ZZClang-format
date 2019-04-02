@@ -74,11 +74,17 @@ ZZClang-format包含下面功能：
 
 那就手动复制，手动打开两个finder窗口，分别前往文件夹/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate与/usr/bin，把前者的codesign_allocate拷贝到/usr/bin下。
 
+如果手动拷贝也不被通过，则需要关闭sip，就不会有限制了
+
 再执行下面语句是不是不一样了？
 
 > locate codesign_allocate
 
-然后再重新签
+经过Xcode10.2验证，需要先恢复xcode签名，然后再自签。
+
+> sudo update_xcode_plugins --restore
+
+自签
 
 > sudo codesign -f -s XcodeSigner /Applications/Xcode.app
 
